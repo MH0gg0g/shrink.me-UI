@@ -1,5 +1,6 @@
-# ShrinkMeUI
+<img width="1100" height="600" alt="shrink me" src="https://github.com/user-attachments/assets/af13cb3e-1e30-4263-b792-49b02abbc905" />
 
+# ShrinkMeUI
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
 ## Development server
