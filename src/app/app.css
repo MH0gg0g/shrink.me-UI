@@ -1,0 +1,9 @@
+:host { display: block; color: #e6eef6; }
+header h1 { color: var(--accent); }
+.lead { color: var(--muted); }
+
+.card { border-radius: 12px; }
+
+@media (min-width: 700px) {
+  main.app-container { padding: 12px; }
+}

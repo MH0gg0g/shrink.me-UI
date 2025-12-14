@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #9aa4b2;
+    --accent: #7c5cff;
+    --accent-2: #22c1c3;
+    --glass: rgba(255, 255, 255, 0.03);
+    --danger: #ff6b6b;
+
+    --bs-primary: #7c5cff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #071025 0%, #0b1220 100%);
+    color: #e6eef6;
+    min-height: 100vh;
+    padding: 28px;
+}
+
+.app-container {
+    width: 900px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.1rem;
+    color: var(--accent);
+}
+
+.lead {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.card {
+    background: var(--glass);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
+    color: inherit;
+    border: none;
+}
+
+
+.card .form-control {
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+
+    &::placeholder {
+        color: #ffffff83;
+    }
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.result {
+    margin-top: 12px;
+}
+
+footer.footer {
+    text-align: center;
+    margin-top: 8px;
+}

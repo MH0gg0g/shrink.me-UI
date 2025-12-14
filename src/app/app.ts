@@ -1,12 +1,14 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ShortenComponent } from './components/shorten/shorten.component';
+import { StatsComponent } from './components/stats/stats.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [ShortenComponent, StatsComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('shrink.me-UI');
+  readonly title = signal('Shrink.me');
 }

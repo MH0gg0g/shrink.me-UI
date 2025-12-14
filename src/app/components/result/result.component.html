@@ -1,0 +1,17 @@
+@if(result){<div class="card p-3">
+  <div class="d-flex justify-content-between align-items-start gap-3">
+    <div class="flex-grow-1">
+      <div class="small">Short URL</div>
+      <a [href]="result.shortUrl" target="_blank" rel="noopener" class="d-block fw-semibold">{{ result.shortUrl }}</a>
+      <div class="small mt-2">Original</div>
+      <div class="text-break">{{ result.Url }}</div>
+      @if(result.CreatedAt){<div class="small mt-2">Created: {{ result.CreatedAt | date:'medium' }}</div>}
+    </div>
+
+    <div class="d-flex flex-column align-items-end">
+      <a [href]="result.shortUrl" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary mb-2">Open</a>
+      <button class="btn btn-sm btn-outline-secondary" (click)="copy()">Copy</button>
+      @if(copied()){<div class="text-success small mt-2">Copied!</div>}
+    </div>
+  </div>
+</div>}

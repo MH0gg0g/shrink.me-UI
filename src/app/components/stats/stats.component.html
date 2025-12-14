@@ -1,0 +1,20 @@
+<div class="card p-3">
+    <h5>Stats</h5>
+    <p class="small">Enter the short key. Example: for <code>http://localhost:8080/abc123</code> the key is
+        <code>abc123</code>.
+    </p>
+
+    <div class="d-flex gap-2 align-items-center">
+        <input [(ngModel)]="keyValue" class="form-control" placeholder="short key" />
+        <button class="btn btn-outline-secondary" (click)="getStats()" [disabled]="loading()">Get Stats</button>
+    </div>
+
+    @if(error()){<div class="mt-3 alert alert-danger">{{ error() }}</div>}
+
+    @if(result()){<div class="mt-3 card p-3">
+        <div><strong>Original URL:</strong> <a [href]="result().Url" target="_blank">{{ result().Url }}</a></div>
+        <div><strong>Short:</strong> {{ result().ShortKey }}</div>
+        <div><strong>Clicks:</strong> {{ result().Clicks }}</div>
+    </div>
+    }
+</div>
